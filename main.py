@@ -46,15 +46,25 @@ class Intro :
         Client(adress,pseudo).run()
     
     def machine (self):
+        
+        try:
+            print("Sous quel port souhaitez vous écouter ?")
+            port = int(input())
+        except:
+            print ("Erreur dans l'encodage du port")
+            self.machine()
 
-        print("Sous quel port souhaitez vous écouter ?")
-        port = int(input())
         Chat(socket.gethostname(),port).run()
 
     def heberge (self):
 
-        print ("Sur quel port souhaitez vous héberger votre serveur?")
-        port = int(input())
+        try:
+            print ("Sur quel port souhaitez vous héberger votre serveur?")
+            port = int(input())
+        except:
+            print ("Erreur dans l'encodage du port")
+            self.heberge()
+
         adress = (socket.gethostname(), port)
         Server(adress).run()
 
