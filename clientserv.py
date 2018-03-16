@@ -84,6 +84,7 @@ class Client:
         }
         self.__running = True
         self.__address = None
+        print ("/send","/client")
         while self.__running:
             line = sys.stdin.readline().rstrip() + ' '
             # Extract the command and the param

@@ -20,6 +20,7 @@ class Chat:
         self.__running = True
         self.__address = None
         threading.Thread(target=self._receive).start()
+        print ("/exit","/quit","/join","/send")
         while self.__running:
             line = sys.stdin.readline().rstrip() + ' '
             # Extract the command and the param
