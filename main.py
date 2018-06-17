@@ -19,7 +19,6 @@ class Intro :
             self.machine()
         else:
             self.heberge()
-
     def server (self):
 
         print ("Identifiez-vous avec un pseudo")
